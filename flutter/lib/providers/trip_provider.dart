@@ -5,10 +5,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mon_app/models/activity.model.dart';
 import 'package:mon_app/models/trip.model.dart';
-import '../data/data.dart' as data;
 
 class TripProvider with ChangeNotifier {
-  final List<Trip> _trips = data.trips;
+  final List<Trip> _trips = [];
   UnmodifiableListView<Trip> get trips => UnmodifiableListView(_trips);
 
   void addTrip(Trip trip) {

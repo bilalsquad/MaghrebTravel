@@ -3,9 +3,10 @@ const City = require("./models/city.model");
 
 mongoose
   .connect(
-    "mongodb+srv://123:<password>@cluster0.vyfne.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "mongodb+srv://123:Adidas123@cluster0.vyfne.mongodb.net/MaghrebTravel?retryWrites=true&w=majority",    
     {
-      useNewUrlParser: true
+      useNewUrlParser: true,
+      useUnifiedTopology: true
     }
   )
   .then(() => {

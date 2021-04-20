@@ -14,20 +14,18 @@ main() {
 }
 
 class MaghrebTravel extends StatefulWidget {
-  // final List<City> cities = data.cities;
-
   @override
   _MaghrebTravelState createState() => _MaghrebTravelState();
 }
 
 class _MaghrebTravelState extends State<MaghrebTravel> {
-  // void addTrip(Trip trip) {
-  //   setState(() {
-  //     trips.add(trip);
-  //   });
-  // }
-
+  final CityProvider cityProvider = CityProvider();
   @override
+  void initState() {
+    cityProvider.fetchData();
+    super.initState();
+  }
+
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [

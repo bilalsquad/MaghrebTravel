@@ -23,12 +23,12 @@ class _HomeViewState extends State<HomeView> {
       ),
       drawer: Drawermain(),
       body: Container(
-        padding: EdgeInsets.all(10),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: cities.map((city) => CityCard(city: city)).toList(),
-        ),
-      ),
+        padding: EdgeInsets.all(10), 
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: cities.map((city) => CityCard(city: city)).toList(),
+          ),
+                ),
     );
   }
 }
