@@ -1,3 +1,5 @@
+// import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 import '../../../models/city_model.dart';
@@ -17,7 +19,7 @@ class CityCard extends StatelessWidget {
             fit: StackFit.expand,
             children: <Widget>[
               Ink.image(
-                image: AssetImage(city.image),
+                image: NetworkImage(city.image),
                 child: InkWell(
                   onTap: () {
                     Navigator.pushNamed(

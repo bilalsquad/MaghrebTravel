@@ -29,7 +29,7 @@ class _CityState extends State<CityView> {
   void initState() {
     super.initState();
     index = 0;
-    mytrip = Trip(activities: [], date: null, city: null);
+    mytrip = Trip(activities: [], date: null, city: null, id: null);
   }
 
   double get amount {

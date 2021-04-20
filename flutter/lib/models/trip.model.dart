@@ -11,5 +11,14 @@ class Trip {
     @required this.city,
     @required this.activities,
     @required this.date,
-  }) : id = UniqueKey().toString();
+    @required this.id,
+  });
+
+  Trip.fromJson(Map<String, dynamic> json)
+      : id = json['id'],
+        city = json['city'],
+        date = DateTime.parse(json['date']),
+        activities = (json['activities'] as List)
+            .map((activitiyJson) => Activity.fromJson(activitiyJson))
+            .toList();
 }

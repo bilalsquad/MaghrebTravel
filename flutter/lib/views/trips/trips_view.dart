@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mon_app/providers/trip_provider.dart';
+import 'package:mon_app/widgets/Loarder.dart';
 import 'package:provider/provider.dart';
 import '../../views/trips/widgets/trips_list.dart';
 
@@ -14,34 +15,37 @@ class TripsView extends StatelessWidget {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-          appBar: AppBar(
-            title: const Text('Mes voyages'),
-            bottom: const TabBar(
-              tabs: <Widget>[
-                const Tab(
-                  text: 'A venir',
-                ),
-                const Tab(
-                  text: 'Passés',
-                ),
-              ],
-            ),
-          ),
-          drawer: const Drawermain(),
-          body: TabBarView(
-            children: <Widget>[
-              TripList(
-                trips: trips
-                    .where((trip) => DateTime.now().isBefore(trip.date))
-                    .toList(),
+        appBar: AppBar(
+          title: const Text('Mes voyages'),
+          bottom: const TabBar(
+            tabs: <Widget>[
+              const Tab(
+                text: 'A venir',
               ),
-              TripList(
-                trips: trips
-                    .where((trip) => DateTime.now().isAfter(trip.date))
-                    .toList(),
+              const Tab(
+                text: 'Passés',
               ),
             ],
-          )),
+          ),
+        ),
+        drawer: const Drawermain(),
+        body: trips.length > 0
+            ? TabBarView(
+                children: <Widget>[
+                  TripList(
+                    trips: trips
+                        .where((trip) => DateTime.now().isBefore(trip.date))
+                        .toList(),
+                  ),
+                  TripList(
+                    trips: trips
+                        .where((trip) => DateTime.now().isAfter(trip.date))
+                        .toList(),
+                  ),
+                ],
+              )
+            : Loader(),
+      ),
     );
   }
 }

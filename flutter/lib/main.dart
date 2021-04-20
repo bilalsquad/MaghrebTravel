@@ -20,17 +20,19 @@ class MaghrebTravel extends StatefulWidget {
 
 class _MaghrebTravelState extends State<MaghrebTravel> {
   final CityProvider cityProvider = CityProvider();
+  final TripProvider tripProvider = TripProvider();
   @override
   void initState() {
     cityProvider.fetchData();
+    tripProvider.fetchData();
     super.initState();
   }
 
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider.value(value: CityProvider()),
-        ChangeNotifierProvider.value(value: TripProvider()),
+        ChangeNotifierProvider.value(value: cityProvider),
+        ChangeNotifierProvider.value(value: tripProvider),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
