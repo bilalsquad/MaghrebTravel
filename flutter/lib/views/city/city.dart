@@ -29,7 +29,7 @@ class _CityState extends State<CityView> {
   void initState() {
     super.initState();
     index = 0;
-    mytrip = Trip(activities: [], date: null, city: null, id: null);
+    mytrip = Trip(activities: [], date: null, city: null);
   }
 
   double get amount {
@@ -124,8 +124,8 @@ class _CityState extends State<CityView> {
       );
     }
     if (result == 'save') {
-      Provider.of<TripProvider>(context, listen: false).addTrip(mytrip);
       mytrip.city = cityName;
+      Provider.of<TripProvider>(context, listen: false).addTrip(mytrip);
       Navigator.pushNamed(context, HomeView.routeName);
     }
   }

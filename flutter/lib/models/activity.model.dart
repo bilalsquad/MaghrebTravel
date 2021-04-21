@@ -26,4 +26,15 @@ class Activity {
         price = json['price'].toDouble(),
         status =
             json['status'] == 0 ? ActivityStatus.ongoing : ActivityStatus.done;
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'image': image,
+      'city': city,
+      'price': price,
+      'status': status == ActivityStatus.ongoing ? 0 : 1,
+    };
+  }
 }

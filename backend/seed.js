@@ -73,14 +73,14 @@ mongoose
         activities: [
           {
             image:
-              "http://10.0.2.2/assets/images/activities/fort_hammamet.jpg",
+              "http://10.0.2.2/assets/images/activities_tunisie/fort_hammamet.jpg",
             name: "Fort de Hammamet",
             id: "t1",
             city: "Hammemet",
             price: 5.0
           },
           {
-            image: "http://10.0.2.2/assets/images/activities/friguia_park.jpg",
+            image: "http://10.0.2.2/assets/images/activities_tunisie/friguia_park.jpg",
             name: "Friguia Park",
             id: "t2",
             city: "Tunis",
@@ -88,7 +88,7 @@ mongoose
           },
           {
             image:
-              "http://10.0.2.2/assets/images/activities/plage.jpg",
+              "http://10.0.2.2/assets/images/activities_tunisie/plage.png",
             name: "Plage",
             id: "t3",
             city: "Sous",

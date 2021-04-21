@@ -52,7 +52,7 @@ app.put("/api/trip", async (req, res) => {
   try {
     const body = req.body;
     const trip = await Trip.findOneAndUpdate({ _id: body._id }, body, {
-      new: true
+      new: true, useFindAndModify: false
     }).exec();
     res.json(trip);
   } catch (e) {
