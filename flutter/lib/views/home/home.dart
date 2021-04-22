@@ -24,17 +24,24 @@ class _HomeViewState extends State<HomeView> {
         actions: <Widget>[Icon(Icons.more_vert)],
       ),
       drawer: Drawermain(),
-      body: Container(
-        padding: EdgeInsets.all(10),
-        child: cities.length > 0
-            ? RefreshIndicator(
-                child: ListView.builder(
-                  itemCount: cities.length,
-                  itemBuilder: (context, i) => CityCard(city: cities[i]),
-                ),
-                onRefresh: Provider.of<CityProvider>(context).fetchData,
-              )
-            : Loader(),
+      body: Column(
+        children: [
+          TextField(),
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.all(10),
+              child: cities.length > 0
+                  ? RefreshIndicator(
+                      child: ListView.builder(
+                        itemCount: cities.length,
+                        itemBuilder: (context, i) => CityCard(city: cities[i]),
+                      ),
+                      onRefresh: Provider.of<CityProvider>(context).fetchData,
+                    )
+                  : Loader(),
+            ),
+          ),
+        ],
       ),
     );
   }

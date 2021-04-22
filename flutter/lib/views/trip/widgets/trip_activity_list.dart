@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mon_app/models/activity.model.dart';
 import 'package:mon_app/models/trip.model.dart';
 import 'package:mon_app/providers/trip_provider.dart';
+
 import 'package:provider/provider.dart';
 
 class TripActivityList extends StatelessWidget {

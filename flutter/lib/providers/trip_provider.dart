@@ -57,6 +57,8 @@ class TripProvider with ChangeNotifier {
     return trips.firstWhere((trip) => trip.id == tripId);
   }
 
+  Activity getCityTripByName(String tripId) => getById(tripId).activities.first;
+
   Future<void> updateTrip(Trip trip, String activityId) async {
     try {
       Activity activity =

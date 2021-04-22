@@ -12,7 +12,7 @@ mongoose
   .then(() => {
     Promise.all([
       new City({
-        name: "Algerie ",
+        name: "Algerie",
         image: "http://10.0.2.2/assets/images/Algerie.png",
         activities: [
           {
@@ -31,8 +31,8 @@ mongoose
           },
           {
             image: "http://10.0.2.2/assets/images/activities_algerie/taddart.jpg",
-            name: "Taddart Rouge",
-            city: "Sud Algerien",
+            name: "Tadrart Rouge",
+            city: "Adrar",
             id: "a3",
             price: 0.0
           },
@@ -46,7 +46,7 @@ mongoose
             image: "http://10.0.2.2/assets/images/activities_maroc/mosque.jpg",
             name: "Mosquée Hassan II",
             id: "m1",
-            city: "Maroc",
+            city: "Marakech",
             price: 100.0
           },
           {
@@ -62,7 +62,7 @@ mongoose
               "http://10.0.2.2/assets/images/activities_maroc/gorges_de_Dadès.jpg",
             name: "Gorges de Dadès",
             id: "m3",
-            city: "Dadès",
+            city: "Tinghir",
             price: 10.0
           },
         ]
@@ -76,7 +76,7 @@ mongoose
               "http://10.0.2.2/assets/images/activities_tunisie/fort_hammamet.jpg",
             name: "Fort de Hammamet",
             id: "t1",
-            city: "Hammemet",
+            city: "hammamet",
             price: 5.0
           },
           {
@@ -91,7 +91,7 @@ mongoose
               "http://10.0.2.2/assets/images/activities_tunisie/plage.png",
             name: "Plage",
             id: "t3",
-            city: "Sous",
+            city: "Sousse",
             price: 0.0
           },
         ]

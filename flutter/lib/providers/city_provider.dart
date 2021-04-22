@@ -1,6 +1,7 @@
 import 'dart:collection';
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
+
 import '../models/city_model.dart';
 import 'package:http/http.dart' as http;
 
