@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mon_app/models/activity.model.dart';
 import 'package:mon_app/models/trip.model.dart';
 import 'package:mon_app/providers/trip_provider.dart';
+
 import 'package:provider/provider.dart';
 
 class TripActivityList extends StatelessWidget {
@@ -42,9 +43,12 @@ class TripActivityList extends StatelessWidget {
                       color: Colors.green[700],
                     ),
                   ),
-                  onDismissed: (_) =>
-                      Provider.of<TripProvider>(context, listen: false)
-                          .setActivityToDone(activity),
+                  confirmDismiss: (_) {
+                    return Provider.of<TripProvider>(context, listen: false)
+                        .updateTrip(trip, activity.id)
+                        .then((_) => true)
+                        .catchError((_) => false);
+                  },
                 )
               : Card(
                   child: ListTile(

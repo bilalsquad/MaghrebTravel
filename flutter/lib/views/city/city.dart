@@ -124,8 +124,8 @@ class _CityState extends State<CityView> {
       );
     }
     if (result == 'save') {
-      Provider.of<TripProvider>(context, listen: false).addTrip(mytrip);
       mytrip.city = cityName;
+      Provider.of<TripProvider>(context, listen: false).addTrip(mytrip);
       Navigator.pushNamed(context, HomeView.routeName);
     }
   }

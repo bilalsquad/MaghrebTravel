@@ -3,7 +3,7 @@ const City = require("./models/city.model");
 
 mongoose
   .connect(
-    "mongodb+srv://123:Adidas123@cluster0.vyfne.mongodb.net/MaghrebTravel?retryWrites=true&w=majority",    
+    "mongodb+srv://123:Adidas123@cluster0.vyfne.mongodb.net/MaghrebTravel?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true
@@ -12,139 +12,88 @@ mongoose
   .then(() => {
     Promise.all([
       new City({
-        name: "Paris",
-        image: "http://10.0.2.2/assets/images/paris.jpeg",
+        name: "Algerie",
+        image: "http://10.0.2.2/assets/images/Algerie.png",
         activities: [
           {
-            image: "http://10.0.2.2/assets/images/activities/louvre.jpeg",
-            name: "Louvre",
-            city: "Paris",
+            image: "http://10.0.2.2/assets/images/activities_algerie/makam.jpg",
+            name: "Makkam Cha3id",
+            id: "a1",
+            city: "Alger",
             price: 12.0
           },
           {
-            image: "http://10.0.2.2/assets/images/activities/chaumont.jpeg",
-            name: "Chaumont",
-            city: "Paris",
+            image: "http://10.0.2.2/assets/images/activities_algerie/mosquée.jpg",
+            name: "Grande Mosqué d'Alger",
+            id: "a2",
+            city: "Alger",
             price: 0.0
           },
           {
-            image: "http://10.0.2.2/assets/images/activities/dame.jpeg",
-            name: "Notre Dame",
-            city: "Paris",
+            image: "http://10.0.2.2/assets/images/activities_algerie/taddart.jpg",
+            name: "Tadrart Rouge",
+            city: "Adrar",
+            id: "a3",
             price: 0.0
           },
-          {
-            image: "http://10.0.2.2/assets/images/activities/defense.jpeg",
-            name: "La défense",
-            city: "Paris",
-            price: 0.0
-          },
-          {
-            image: "http://10.0.2.2/assets/images/activities/effeil.jpeg",
-            name: "Tour Eiffel",
-            city: "Paris",
-            price: 15.0
-          },
-          {
-            image: "http://10.0.2.2/assets/images/activities/luxembourg.jpeg",
-            name: "Jardin Luxembourg",
-            id: "a6",
-            city: "Paris",
-            price: 0.0
-          },
-          {
-            image: "http://10.0.2.2/assets/images/activities/mitterrand.jpeg",
-            name: "Bibliothèque Mitterrand",
-            id: "a7",
-            city: "Paris",
-            price: 0.0
-          },
-          {
-            image: "http://10.0.2.2/assets/images/activities/montmartre.jpeg",
-            name: "Montmartre",
-            id: "a8",
-            city: "Paris",
-            price: 0.0
-          },
-          {
-            image: "http://10.0.2.2/assets/images/activities/catacombe.jpeg",
-            name: "Catacombes",
-            id: "a9",
-            city: "Paris",
-            price: 10.0
-          }
         ]
       }).save(),
       new City({
-        name: "Lyon",
-        image: "http://10.0.2.2/assets/images/lyon.jpeg",
+        name: "Maroc",
+        image: "http://10.0.2.2/assets/images/maroc.gif",
         activities: [
           {
-            image: "http://10.0.2.2/assets/images/activities/lyon_opera.jpeg",
-            name: "Opéra",
-            id: "l1",
-            city: "Lyon",
+            image: "http://10.0.2.2/assets/images/activities_maroc/mosque.jpg",
+            name: "Mosquée Hassan II",
+            id: "m1",
+            city: "Marakech",
             price: 100.0
           },
           {
             image:
-              "http://10.0.2.2/assets/images/activities/lyon_bellecour.jpeg",
-            name: "Place Bellecour",
-            id: "l2",
-            city: "Lyon",
+              "http://10.0.2.2/assets/images/activities_maroc/surf.jpg",
+            name: "Surf",
+            id: "m2",
+            city: "Tanger",
             price: 0.0
           },
           {
             image:
-              "http://10.0.2.2/assets/images/activities/lyon_basilique.jpeg",
-            name: "Basilique St-Pierre",
-            id: "l3",
-            city: "Lyon",
+              "http://10.0.2.2/assets/images/activities_maroc/gorges_de_Dadès.jpg",
+            name: "Gorges de Dadès",
+            id: "m3",
+            city: "Tinghir",
             price: 10.0
           },
-          {
-            image: "http://10.0.2.2/assets/images/activities/lyon_mairie.jpeg",
-            name: "Mairie",
-            id: "l4",
-            city: "Lyon",
-            price: 0.0
-          }
         ]
       }).save(),
       new City({
-        name: "Nice",
-        image: "http://10.0.2.2/assets/images/nice.jpeg",
+        name: "Tunisie",
+        image: "http://10.0.2.2/assets/images/tunisie.gif",
         activities: [
           {
             image:
-              "http://10.0.2.2/assets/images/activities/nice_orthodox.jpeg",
-            name: "Eglise Orthodoxe",
-            id: "n1",
-            city: "Nice",
+              "http://10.0.2.2/assets/images/activities_tunisie/fort_hammamet.jpg",
+            name: "Fort de Hammamet",
+            id: "t1",
+            city: "hammamet",
             price: 5.0
           },
           {
-            image: "http://10.0.2.2/assets/images/activities/nice_riviera.jpeg",
-            name: "Riviera",
-            id: "n2",
-            city: "Nice",
+            image: "http://10.0.2.2/assets/images/activities_tunisie/friguia_park.jpg",
+            name: "Friguia Park",
+            id: "t2",
+            city: "Tunis",
             price: 0.0
           },
           {
             image:
-              "http://10.0.2.2/assets/images/activities/nice_promenade.jpeg",
-            name: "Promenade des Anglais",
-            id: "n3",
-            city: "Nice",
+              "http://10.0.2.2/assets/images/activities_tunisie/plage.png",
+            name: "Plage",
+            id: "t3",
+            city: "Sousse",
             price: 0.0
           },
-          {
-            image: "http://10.0.2.2/assets/images/activities/nice_opera.jpeg",
-            name: "Opéra",
-            id: "n4",
-            city: "Nice",
-            price: 100.0
-          }
         ]
       }).save()
     ]).then(res => {
